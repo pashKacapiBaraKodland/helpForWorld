@@ -1,9 +1,6 @@
 import discord
 import random
 from discord.ext import commands
-from spamd import spamm
-import os
-import requests
 from discord.ext import commands
 intents = discord.Intents.default()
 intents.message_content = True
