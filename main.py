@@ -30,7 +30,7 @@ async def mem(ctx):
 
 
 @bot.command()
-async def москва(ctx):
+async def Moskva(ctx):
     
     with open(f'places/moskva', 'rb') as f:
             picture = discord.File(f)
