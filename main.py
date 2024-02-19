@@ -3,8 +3,7 @@ import random
 from discord.ext import commands
 
 import os
-import requests
-from discord.ext import commands
+
 intents = discord.Intents.default()
 intents.message_content = True
 
@@ -16,7 +15,7 @@ async def on_ready():
 
 @bot.command()
 async def hello(ctx):
-    """just say hello and name"""
+
     await ctx.send(f'Привет! Я бот который помогает в уборке мусора {bot.user}!')
 
 
@@ -34,6 +33,7 @@ async def mem(ctx):
 
 @bot.command()
 async def ChoiceCity(ctx, city):
+    """sending you a picture of place of this city or town Dont Forget to write the city"""
     if city == 'Moskva':
         with open(f'places/moskva.png', 'rb') as f:
                 picture = discord.File(f)
@@ -56,6 +56,7 @@ async def ChoiceCity(ctx, city):
                 picture = discord.File(f)
     # Можем передавать файл как параметр!
         await ctx.send(file=picture)
+    
 
 @bot.command()
 async def url(ctx):
