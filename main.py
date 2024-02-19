@@ -33,7 +33,7 @@ async def mem(ctx):
 
 
 @bot.command()
-async def rubbish(ctx, city):
+async def ChoiceCity(ctx, city):
     if city == 'Moskva':
         with open(f'places/moskva.png', 'rb') as f:
                 picture = discord.File(f)
