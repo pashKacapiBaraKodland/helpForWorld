@@ -60,5 +60,13 @@ async def rubbish(ctx, city):
 @bot.command()
 async def url(ctx):
       await ctx.send('https://recyclemap.ru       давай спасай мир😉!')
+@bot.command()
+async def memAnimals(ctx):
+    images2 = os.listdir('imagesanimal')
+    img_name1 = random.choice(images2)
+    # А вот так можно подставить имя файла из переменной!
+    with open(f'imagesanimal/{img_name1}', 'rb') as f:
+            picture = discord.File(f)
+    await ctx.send(file=picture)
 
 bot.run("")
