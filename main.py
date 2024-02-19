@@ -33,32 +33,29 @@ async def mem(ctx):
 
 
 @bot.command()
-async def Moskva(ctx):
-    
-    with open(f'places/moskva', 'rb') as f:
-            picture = discord.File(f)
-   # Можем передавать файл как параметр!
-    await ctx.send(file=picture)
-@bot.command()
-async def SanktPeterburg(ctx):
-    with open(f'places/sankt-peterburg.png', 'rb') as f:
-            picture = discord.File(f)
-   # Можем передавать файл как параметр!
-    await ctx.send(file=picture)
-@bot.command()
-async def YuzchnoSahalinsk(ctx):
+async def rubbish(ctx, city):
+    if city == 'Moskva':
+        with open(f'places/moskva.png', 'rb') as f:
+                picture = discord.File(f)
+    # Можем передавать файл как параметр!
+        await ctx.send(file=picture)
+    if city == 'SanktPeterburg':
+        with open(f'places/sankt-peterburg.png', 'rb') as f:
+                picture = discord.File(f)
+    # Можем передавать файл как параметр!
+        await ctx.send(file=picture)
 
-    with open(f'places/yuzchno-sahalinsk.png', 'rb') as f:
-            picture = discord.File(f)
-   # Можем передавать файл как параметр!
-    await ctx.send(file=picture)
-@bot.command()
-async def Sochi(ctx):
+    if city == 'YuzchnoSahalinsk':
+        with open(f'places/yuzchno-sahalinsk.png', 'rb') as f:
+                picture = discord.File(f)
+    # Можем передавать файл как параметр!
+        await ctx.send(file=picture)
 
-    with open(f'places/sochi.png', 'rb') as f:
-            picture = discord.File(f)
-   # Можем передавать файл как параметр!
-    await ctx.send(file=picture)
+    if city == 'Sochi':
+        with open(f'places/sochi.png', 'rb') as f:
+                picture = discord.File(f)
+    # Можем передавать файл как параметр!
+        await ctx.send(file=picture)
 
 @bot.command()
 async def url(ctx):
